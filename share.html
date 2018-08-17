@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<style>
+			.md-input{
+				margin-left: 1%;
+				width: 98%;
+				border-style: dashed;
+				border-width: 2px;
+			}
+			.outer {
+				 overflow: hidden;
+				 position: relative;
+			}
+			.inner {
+				 position: absolute;
+			}
+			.form-control:focus{
+				border-color: #ced4da !important;
+				box-shadow: none !important;
+				border-style: dashed !important;
+				border-width: 2px !important;
+			}
+		</style>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="jssocials.min.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="jssocials.css" />
+
+		<link type="text/css" rel="stylesheet" href="jssocials-theme-flat.css" />
+	</head>
+
+	<body>
+		<br>
+		 <div class="md-form">
+			<label style="margin-left: 1%;" for="form7">Refer-a-Friend</label>
+			<input style="margin-left: 1%;width: 75%;border-style: dashed;border-width: 2px;resize: none;" type="text" id="form7" class="md-input form-control" placeholder="Hey Guys, use my referral code to get RS.100 on your First Order. Use my referral code on your signup. My referral code: MB0019MMI." readonly>
+			<button onclick="myFunction()" class="btn btn-default" style="margin-top: -39px;margin-left: 76.5%;">
+				Copy
+			</button>
+		 </div>
+		 <div class="outer">
+			<input class="inner" id="refer_code" type="text" value="Hey Guys, use my referral  code to get RS.100 on your First Order. Use my referral  code on your signup. My referral  code: MB0019MMI."> 
+		 </div>
+		<span style="display:none;" id="test">Hey Guys, use my referral  code to get RS.100 on your First Order. Use my referral  code on your signup. My referral  code: MB0019MMI. Click on the link below to signup.</span>	
+		<div id="shareIcons" style="margin-left: 1%;"></div>
+
+		<script>
+			$("#shareIcons").jsSocials({
+				subject:"Referral Code",
+				url:"http://www.ebzaar.com",
+				text:document.getElementById('test').innerHTML +"\n",
+				showLabel: true,
+				showCount: false,
+				shares: ["email", "twitter", "webWhatsapp", "facebook", "whatsapp"],
+				smallScreenWidth: 320,
+				largeScreenWidth: 640
+
+			});
+			function myFunction() {
+			  var copyText = document.getElementById("refer_code");
+			  copyText.select();
+			  document.execCommand("copy");
+			  console.log(copyText.value);
+			}
+		</script>
+
+	</body>
+</html>
+
