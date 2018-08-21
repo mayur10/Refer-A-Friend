@@ -1,11 +1,18 @@
-@media (pointer:coarse) { 
-  .jssocials-share-whatsapp{
-	display: inline-block !important;
-}
+@media (max-width: 768px) { 
+	.jssocials-share-whatsapp{
+		visibility: visible;
+	}
+	.jssocials-share-webWhatsapp{
+		visibility: hidden;
+	}
 }
 
 .jssocials-share-whatsapp{
-	display: none !important;
+	visibility: hidden;
+}
+
+.jssocials-share-webWhatsapp{
+	visibility: visible;
 }
 
 .jssocials-shares {
