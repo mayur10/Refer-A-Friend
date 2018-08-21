@@ -9,9 +9,55 @@
 	}
 }
 
-@media only screen and (max-width: 411px){
+@media only screen and (max-width: 682px){
     .md-input{
-		height: 23% !important;
+		width: 98% !important;
+	}
+	.btn-default{
+		margin-left: 5px !important;
+		margin-top: 5px !important;
+	}
+}
+
+@media only screen and (max-width: 522px){
+    .md-input{
+		height: 16% !important;
+	}
+}
+
+@media only screen and (max-width: 352px){
+    .md-input{
+		height: 20% !important;
+	}
+}
+
+@media only screen and (max-width: 280px){
+    .md-input{
+		height: 25% !important;
+	}
+}
+
+@media only screen and (max-width: 224px){
+    .md-input{
+		height: 30% !important;
+	}
+}
+
+@media only screen and (max-width: 211px){
+    .md-input{
+		height: 35% !important;
+	}
+}
+
+@media only screen and (max-width: 180px){
+    .md-input{
+		height: 42% !important;
+	}
+}
+
+@media only screen and (max-width: 147px){
+    .md-input{
+		height: 50% !important;
 	}
 }
 
