@@ -9,6 +9,12 @@
 	}
 }
 
+@media only screen and (max-width: 411px){
+    .md-input{
+		height: 15% !important;
+	}
+}
+
 .jssocials-share-whatsapp{
 	visibility: hidden;
 }
