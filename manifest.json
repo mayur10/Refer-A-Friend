@@ -1,0 +1,16 @@
+{
+    "dir": "ltr",
+    "lang": "da",
+    "name": "Refer-A-Friend",
+    "scope": "/Refer-A-Friend/",
+    "display": "standalone",
+    "start_url": "https://mayur10.github.io/Refer-A-Friend/",
+    "short_name": "Refer-A-Friend",
+    "theme_color": "transparent",
+    "description": "",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": []
+}
