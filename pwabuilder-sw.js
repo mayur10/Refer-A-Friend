@@ -6,7 +6,7 @@ var preLoad = function(){
   console.log('[PWA Builder] Install Event processing');
   return caches.open('pwabuilder-offline').then(function(cache) {
     console.log('[PWA Builder] Cached index and offline page during Install');
-    return cache.addAll(['/offline.html', '/index.html']);
+    return cache.addAll(['Refer-A-Friend/offline.html', 'Refer-A-Friend/index.html']);
   });
 }
 
