@@ -1,4 +1,5 @@
 self.addEventListener('install', function(event) {
+  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
   event.waitUntil(preLoad());
 });
 
@@ -10,6 +11,7 @@ var preLoad = function(){
     return cache.addAll(['./offline.html', './index.html']);
   });
 }
+
 self.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
@@ -18,6 +20,7 @@ self.addEventListener('beforeinstallprompt', (e) => {
   // Update UI notify the user they can add to home screen
   btnAdd.style.display = 'block';
 });
+
 btnAdd.addEventListener('click', (e) => {
   // hide our user interface that shows our A2HS button
   btnAdd.style.display = 'none';
@@ -36,6 +39,7 @@ btnAdd.addEventListener('click', (e) => {
 });
 
 self.addEventListener('fetch', function(event) {
+  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
   console.log('[PWA Builder] The service worker is serving the asset.');
   event.respondWith(checkResponse(event.request).catch(function() {
     return returnFromCache(event.request)}
