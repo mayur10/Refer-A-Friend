@@ -1,5 +1,4 @@
 self.addEventListener('install', function(event) {
-  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
   event.waitUntil(preLoad());
 });
 
@@ -39,7 +38,6 @@ btnAdd.addEventListener('click', (e) => {
 });
 
 self.addEventListener('fetch', function(event) {
-  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
   console.log('[PWA Builder] The service worker is serving the asset.');
   event.respondWith(checkResponse(event.request).catch(function() {
     return returnFromCache(event.request)}
